@@ -6,14 +6,9 @@ import { Pressable } from "react-native";
 import Colors from "@/constants/Colors";
 import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
+import { TabBarIcon } from "@/components/Icons";
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -36,8 +31,8 @@ export default function TabLayout() {
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
-                    name="info-circle"
-                    size={25}
+                    name="address-book"
+                    size={28}
                     color={Colors[colorScheme ?? "light"].text}
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
                   />
